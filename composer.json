@@ -1,0 +1,35 @@
+{
+    "name": "ahmetbarut/documentor",
+    "autoload": {
+        "psr-4": {
+            "AhmetBarut\\Documentor\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Ahmet Barut",
+            "email": "ahmetbarut588@gmail.com"
+        }
+    ],
+    "autoload-dev": {
+        "psr-4": {
+            "AhmetBarut\\Documentor\\Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^1.22",
+        "orchestra/testbench": "6.* || 7.*"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "require": {
+        "symfony/finder": "^5.4.11 || ^6.0.1",
+        "illuminate/support": "^8.73.2 || ^9.0.0"
+    },
+    "scripts": {
+        "test": "vendor/bin/pest"
+    }
+}
