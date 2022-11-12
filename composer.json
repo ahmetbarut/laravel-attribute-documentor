@@ -1,5 +1,5 @@
 {
-    "name": "ahmetbarut/documentor",
+    "name": "ahmetbarut/laravel-attributes-documentor",
     "autoload": {
         "psr-4": {
             "AhmetBarut\\Documentor\\": "src/"

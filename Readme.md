@@ -54,7 +54,7 @@ composer test
 You can install the package via composer:
 
 ```bash
-composer require ahmetbarut/laravel-attribute-documentor
+composer require ahmetbarut/laravel-attributes-documentor
 ```
 
 ## Usage
