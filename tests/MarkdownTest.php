@@ -10,15 +10,15 @@ $attributesFinder = new FindAttributeDescription([
 $attributesFinder->find();
 
 $attributesFinder
-->getClassAttributeDescription()
-->getMethodsDescription()
-->getPropertiesDescription();
-;
+    ->getClassAttributeDescription()
+    ->getMethodsDescription()
+    ->getPropertiesDescription();
 
-$markdown = new class extends Markdown {
-    public function getPath(): string
+$markdown = new class extends Markdown
+{
+    public function __construct()
     {
-        return __DIR__ . '/temp';
+        parent::__construct(__DIR__ . '/temp', 'docs.md');
     }
 };
 

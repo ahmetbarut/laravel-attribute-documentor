@@ -101,3 +101,14 @@ $markdown = new Markdown();
 // default path is docs
 $markdown->write($data);
 ```
+
+## Usage Command
+
+By default the command will search for `base_path('docs')` directory and put the filename as `docs.md`.
+
+To change the directory; You can change the directory like `--directory=/path/to/dir`.
+To change the file name; `--output-file=filename`
+
+```shell
+php artisan documentor:generate
+```

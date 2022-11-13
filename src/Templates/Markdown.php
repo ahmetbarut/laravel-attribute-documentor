@@ -6,16 +6,20 @@ use AhmetBarut\Documentor\Contracts\Writer;
 
 class Markdown
 {
+    public function __construct(protected string $path, protected string $fileName)
+    {
+    }
+    
     public function getPath(): string
     {
-        return base_path('docs');
+        return $this->path;
     }
 
     public function write(array $attributes): bool
     {
         $content = $this->generate($attributes);
 
-        return file_put_contents($this->getPath() . '/docs.md', $content);
+        return file_put_contents($this->getPath() . '/' . $this->fileName, $content);
     }
 
     private function generate(array $attributes): string

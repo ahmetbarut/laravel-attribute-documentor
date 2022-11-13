@@ -2,6 +2,7 @@
 
 namespace AhmetBarut\Documentor\Tests;
 
+use AhmetBarut\Documentor\Providers\AhmetBarutLaravelDocumentorProvider;
 use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -12,8 +13,10 @@ abstract class TestCase extends Orchestra
         parent::setUp();
     }
 
-    protected function getEnvironmentSetUp($app)
+    protected function getPackageProviders($app)
     {
-        // dd($app);
+        return [
+            AhmetBarutLaravelDocumentorProvider::class,
+        ];
     }
 }
