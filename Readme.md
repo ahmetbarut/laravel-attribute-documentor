@@ -81,3 +81,23 @@ $documentor
 ->filter()
 
 ```
+
+## Write To Markdown
+
+```php
+use AhmetBarut\Documentor\FindAttributeDescription;
+use AhmetBarut\Documentor\Templates\Markdown;
+
+$documentor = new FindAttributeDescription([
+  ...paths
+]);
+
+$documentor->find();
+
+$data = $documentor->getClassAttributeDescription()->getMethodsDescription()->getPropertiesDescription()->filter();
+
+$markdown = new Markdown();
+
+// default path is docs
+$markdown->write($data);
+```
