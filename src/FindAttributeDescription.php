@@ -3,6 +3,7 @@
 namespace AhmetBarut\Documentor;
 
 use AhmetBarut\Documentor\Attributes\Document;
+use AhmetBarut\Documentor\Contracts\Writer;
 use ReflectionClass;
 use Symfony\Component\Finder\Finder;
 use Illuminate\Support\Str;
@@ -161,5 +162,10 @@ class FindAttributeDescription
                 count($attribute['properties']) > 0 ||
                 count($attribute['class']) > 0
         );
+    }
+
+    public function write(Writer $writer)
+    {
+        dd($writer);
     }
 }
