@@ -25,6 +25,13 @@
             "pestphp/pest-plugin": true
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "AhmetBarut\\Documentor\\Providers\\AhmetBarutLaravelDocumentorProvider"
+            ]
+        }
+    },
     "require": {
         "symfony/finder": "^5.4.11 || ^6.0.1",
         "illuminate/support": "^8.73.2 || ^9.0.0"
